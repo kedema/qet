@@ -3,7 +3,7 @@
 Ressources diverses pour le logiciel de schémas open source QElectroTech
 
 ## Resources disponibles:
-### [PS] v1-qetpropadder (Fonctionnel)
+### [Script][PS] v1-qetpropadder (Fonctionnel)
 
 Script powershell conçu pour ajouter des propriétés globales personnalisées selon un fichier csv donné dans le code.
 Il est développé à la base pour ajouter rapidement les propriétés nécéssaire à insérer dans le cartouche (Numéro de client, nom de chantier ...)
