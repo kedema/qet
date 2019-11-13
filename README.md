@@ -21,9 +21,8 @@ $propToAddList = Import-Csv -Path "add\properties.csv"
 ```
 Enregistrez et fermez.
 
-Executez le script: 
-1* Clic-droit executer avec powershell
-2* Créer un raccourci windows avec comme parametres: 
+Pour executer le script, vous avez deux options: 
+Simplement un clic-droit sur le fichier "qetpropadder.ps1" et exécuter avec powershell. Ou vous pouvez créer un raccourci windows avec comme paramètres: 
 
 ```
 powershell.exe -ExecutionPolicy Bypass -File "Chemin\vers\qetpropadder.ps1"
