@@ -30,3 +30,18 @@ powershell.exe -ExecutionPolicy Bypass -File "Chemin\vers\qetpropadder.ps1"
 ```
 
 Sélectionnez votre fichier projet .qet et le script va ajouter les proprietés à un nouveau fichier commençant par "updated_", ouvrez ce nouveau fichier avec QeletroTech et si tout c'est bien passer vos nouvelles variables sont là!
+
+### [Schéma][QElectroTech|PDF] Schéma de câblage pour Fil Pilote
+
+Des schémas de principe pour câbler des zones de chauffage avec un sonoff 4Ch R2, avec en bonus le fichier source du schéma si vous voulez le modifier ou récuperer des éléments de dessin.
+Si vous avez des difficultés à ouvrir le schéma vous devrez peut-être modifier le début du fichier avec un éditeur de texte pour y insérer le chemin vers le fichier.
+
+```
+<project folioSheetQuantity="0" title="" version="0.70">
+    <properties>
+      ...
+      <property show="1" name="savedfilepath">Chemin/vers/branchement fil pilote.qet</property>
+      ...
+    </properties>
+```
+
