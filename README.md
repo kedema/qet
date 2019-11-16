@@ -31,6 +31,27 @@ powershell.exe -ExecutionPolicy Bypass -File "Chemin\vers\qetpropadder.ps1"
 
 Sélectionnez votre fichier projet .qet et le script va ajouter les proprietés à un nouveau fichier commençant par "updated_", ouvrez ce nouveau fichier avec QeletroTech et si tout c'est bien passer vos nouvelles variables sont là!
 
+### [Script][PS] QelectroTech Network Install-helper (Partiellement fonctionnel)
+Script conçu pour "centraliser" une installation QelectroTech. Scénario: 
+```
+L'administrateur choisit le dossier sur le serveur ($rootInstall) et y dépose la dernière version.
+il maintient le numero de version dans $rootInstall\version.txt
+-installation/mise a jour
+On execute le script sur la machine
+	installe ou met à jour l'installation
+    installe les raccourcis/associations
+-Réinstallation
+On execute -force
+	desinstalle le programme et la configuration
+-Réinstallation/avec Suppression config
+On execute -forceconf
+	desinstalle le programme et la configuration
+-Désinstallation
+On execute -uninstall
+	desinstalle le programme et la configuration
+	supprime les raccouris/associations
+```
+
 ### [Schéma][QElectroTech|PDF] Schéma de câblage pour Fil Pilote
 
 Des schémas de principe pour câbler des zones de chauffage avec un sonoff 4Ch R2, avec en bonus le fichier source du schéma si vous voulez le modifier ou récuperer des éléments de dessin.
