@@ -3,7 +3,7 @@
 Ressources diverses pour le logiciel de schémas open source QElectroTech
 
 ## Resources disponibles:
-### [Script][PS] v1-qetpropadder (Fonctionnel)
+### [Script] [PS] v1-qetpropadder (Fonctionnel)
 
 Script powershell conçu pour ajouter des propriétés globales personnalisées selon un fichier csv donné dans le code.
 Il est développé à la base pour ajouter rapidement les propriétés nécéssaire à insérer dans le cartouche (Numéro de client, nom de chantier ...)
@@ -51,6 +51,14 @@ On execute -uninstall
 	desinstalle le programme et la configuration
 	supprime les raccouris/associations
 ```
+
+### [Script][PS] Changement des informations d'auteur d'éléments
+Changes les informations d'auteur des éléments d'un répertoire et ses sous-répertoires, pratique pour mettre à jour toute une bibliothèque.
+Modifiez le "-Path" de la ligne suivante pour y pointer le dossier de vos éléments.
+```
+$files = @(Get-ChildItem -Path C:\PATH\TO\ELEMENTS\LIBRARY -Recurse -Include "*.elmt" | ForEach-Object { Write-Output $_.FullName })
+```
+Modifiez ensuite la balise "$autorInfo" pour mettre vos informations et éxecutez le script. It's done!
 
 ### [Schéma][QElectroTech|PDF] Schéma de câblage pour Fil Pilote
 
