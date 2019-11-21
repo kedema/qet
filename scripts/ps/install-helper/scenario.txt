@@ -2,13 +2,16 @@ Dossier Programs: "Poste client"
 Dossier server: "Program Qelectrotech à copier"
 
 Scenario:
-L'administrateur du programme choisit le dossier sur le serveur ($rootDir) et y dépose la dernière version.
-il maintient le numero de version dans $rootDir\version.txt
+L'administrateur du programme choisit le dossier sur le serveur ($rootInstall) et y dépose la dernière version.
+il maintient le numero de version dans $rootInstall\version.txt
 -installation/mise a jour
 On execute le script sur la machine
 	installe ou met à jour l'installation
 -Réinstallation
 On execute -force
+	desinstalle le programme et la configuration
+-Réinstallation/avec Suppression config
+On execute -forceconf
 	desinstalle le programme et la configuration
 -Désinstallation
 On execute -uninstall
