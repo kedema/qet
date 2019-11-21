@@ -1,6 +1,5 @@
 # Files to skip #
 #################
-scripts/ps/install-helper/Programs/*
 scripts/ps/install-helper/User/*
 
 # OS generated files #

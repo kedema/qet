@@ -20,14 +20,16 @@ $rootVersionFile = $rootInstall+"version.txt"
 $rootLibraries = $testDir+"\server\qelectro_centralized\libraries\"
 
 #Client (machine to install) parameters
-$installDir = $testDir+"\Programs\"
+$installDir = $testDir+"\User\Programs\"
 $qetInstallPath = $installDir+"qelectrotech\"
 $installVersionFile = $qetInstallPath+"version.txt"
 $clientLibraries = $testDir+"\User\qelectro_symboles\"
+$shortcutFile = "Lancer QET.bat" #Nom du fichier de lancement du programme
+$shortcutPath = [Environment]::GetFolderPath("Desktop")
+$shortcutName = "Lancer QET fake.lnk" #Nom du raccourci avec l'extension
 #End of parameters
 
 #Begin of variables
-
 $rootVersion = Get-content -Path $rootVersionFile -ErrorAction SilentlyContinue
 $installVersion = Get-content -Path $installVersionFile -ErrorAction SilentlyContinue
 #End of variables
@@ -60,12 +62,19 @@ Function updateQelectrotech {
 
 Function installQelectrotech {
      try {
-        if(-Not (Test-Path $qetInstallPath)){
-            New-Item -Path $qetInstallPath -ItemType Directory | Out-Null
-            Write-Host "Directory $qetInstallPath created."
-        } else {Write-Host "Directory $qetInstallPath already existing."}
+        if(-Not (Test-Path $qetInstallPath)){New-Item -Path $qetInstallPath -ItemType Directory | Out-Null ; Write-Host "Directory $qetInstallPath created."} 
+        else {Write-Host -ForegroundColor Red "Directory $qetInstallPath already existing."}
         Get-ChildItem -Path $rootInstall | %{ Copy-Item $_.FullName -Destination $qetInstallPath -Recurse -Force }
-        Write-Host -ForegroundColor Green "Root installation files successfully copied."
+        Write-Host -ForegroundColor Green "Root installation files successfully copied.`r`nExecuting files association.."
+		$qetFilesType = Start-Process $qetInstallPath\register_filetypes.bat -Wait -PassThru
+        $qetFilesType.WaitForExit()
+        Write-Host -ForegroundColor Green "Installing shortcuts..."
+        Write-Host "$shortcutPath\$shortcutName '$shortcutPath\$shortcutName'"
+        Write-Host "$shortcutFile '$shortcutFile'"
+        $WSSh = New-Object -ComObject WScript.Shell
+        $Shortcut = $WSSh.CreateShortcut("$shortcutPath\$shortcutName")
+        $Shortcut.TargetPath = "$qetInstallPath\$shortcutFile"
+        $Shortcut.Save()
      }
      catch {
         Write-Host -ForegroundColor Red "Unable to install!"
