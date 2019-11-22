@@ -1,0 +1,61 @@
+<definition orientation="dyyy" height="50" hotspot_y="24" version="0.70" type="element" link_type="master" hotspot_x="9" width="20">
+  <uuid uuid="{681fd8a8-38fc-4611-a7cf-5713e4e19665}" />
+  <names>
+    <name lang="en">Circuit-breaker   1P-B20</name>
+    <name lang="cs">Jistič  1P-B20</name>
+    <name lang="nl">Lastscheider 1P-B20</name>
+    <name lang="it">Sezionatore 1P-B20</name>
+    <name lang="de">Lastschalter  1P-B20</name>
+    <name lang="fr">Disjoncteur mono 1P-B20</name>
+    <name lang="pl">Wyłącznik 1P-B20</name>
+    <name lang="es">Disyuntor 1P-B20</name>
+    <name lang="ar">قاطع أحادي الوجه</name>
+  </names>
+  <kindInformations>
+    <kindInformation show="1" name="type">protection</kindInformation>
+  </kindInformations>
+  <elementInformations>
+    <elementInformation show="1" name="machine-manufacturer-reference">
+    </elementInformation>
+    <elementInformation show="1" name="comment">Disjoncteur 1P B20</elementInformation>
+    <elementInformation show="1" name="designation">
+    </elementInformation>
+    <elementInformation show="1" name="manufacturer">
+    </elementInformation>
+    <elementInformation show="1" name="unity">
+    </elementInformation>
+    <elementInformation show="1" name="label">
+    </elementInformation>
+    <elementInformation show="1" name="manufacturer-reference">
+    </elementInformation>
+    <elementInformation show="1" name="plant">
+    </elementInformation>
+    <elementInformation show="1" name="quantity">
+    </elementInformation>
+    <elementInformation show="1" name="supplier">
+    </elementInformation>
+    <elementInformation show="1" name="description">
+    </elementInformation>
+  </elementInformations>
+  <informations>Author: Kevin De Magalhaes (KDM)
+Github: https://github.com/kedema
+Year: 2019 </informations>
+  <description>
+    <text text="2" font="Sans Serif,4,-1,5,50,0,0,0,0,0" y="18" x="2" rotation="0" color="#000000" />
+    <polygon y2="10" x3="-5" style="line-style:normal;line-weight:normal;filling:none;color:black" x4="-5" closed="false" y1="20" x5="-5" x2="0" y3="-10" antialias="true" y5="-10" x1="0" y4="-10" />
+    <line length2="1.5" y2="-10" end1="none" style="line-style:normal;line-weight:normal;filling:none;color:black" y1="-20" x2="0" end2="none" antialias="false" x1="0" length1="1.5" />
+    <line length2="1.5" y2="-12" end1="none" style="line-style:normal;line-weight:normal;filling:none;color:black" y1="-8" x2="-2" end2="none" antialias="false" x1="2" length1="1.5" />
+    <line length2="1.5" y2="-8" end1="none" style="line-style:normal;line-weight:normal;filling:none;color:black" y1="-12" x2="-2" end2="none" antialias="false" x1="2" length1="1.5" />
+    <text text="1" font="Sans Serif,4,-1,5,50,0,0,0,0,0" y="-15" x="2" rotation="0" color="#000000" />
+    <dynamic_text font="Sans Serif,5,-1,5,25,0,0,0,0,0" text_width="-1" y="-2" z="12" frame="false" x="12" Valignment="AlignTop" rotation="0" uuid="{7552097b-d37a-4a9c-a300-c9dc4b4f1886}" text_from="UserText" Halignment="AlignLeft">
+      <text>B20</text>
+    </dynamic_text>
+    <dynamic_text font="Sans Serif,9,-1,5,50,0,0,0,0,0" text_width="-1" y="-20" z="13" frame="false" x="12" Valignment="AlignTop" rotation="0" uuid="{c30ac6a5-6c47-43d1-b75b-f6604b36acf2}" text_from="ElementInfo" Halignment="AlignLeft">
+      <text>
+      </text>
+      <info_name>label</info_name>
+    </dynamic_text>
+    <terminal orientation="s" y="20" x="0" />
+    <terminal orientation="n" y="-20" x="0" />
+  </description>
+</definition>
